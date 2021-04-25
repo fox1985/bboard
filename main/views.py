@@ -60,7 +60,8 @@ def other_page(request, page):
 def profile(request):
     return render(request, 'main/profile.html')
 
-
+def by_rubric(request, pk):
+    pass
 
 class BBLoginView(LoginView):
     template_name = 'main/login.html'
