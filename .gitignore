@@ -1,0 +1,8 @@
+# не добавлеть папку совсем содержимым
+.idea/
+media/
+static/
+*bboard.sqlite3
+*.pyc
+emailsettings.py
+db.json
