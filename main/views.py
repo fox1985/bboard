@@ -65,7 +65,12 @@ def other_page(request, page):
 
 @login_required
 def profile(request):
-    return render(request, 'main/profile.html')
+    bbs = Bb.objects.filter(author=request.user.pk)
+    context = {'bbs': bbs }
+    return render(request, 'main/profile.html', context)
+
+def profile_bb_detail(request):
+    pass
 
 def by_rubric(request, pk):
     rubric = get_object_or_404(SubRubric, pk=pk)

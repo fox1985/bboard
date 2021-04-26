@@ -3,7 +3,7 @@ from django.urls import path
 from django.views.decorators.cache import never_cache
 
 from bboard import settings
-from .views import index, other_page, profile, user_activate, by_rubric, detail
+from .views import index, other_page, profile, user_activate, by_rubric, detail, profile_bb_detail
 
 from .views import BBLoginView, BBLogoutView, ChangeUserInfoView, BBPasswordChageView, \
     RegisterUserView, RegisterDoneView, DeleteUserView
@@ -21,6 +21,7 @@ urlpatterns = [
     path('accounts/register/done/', RegisterDoneView.as_view(), name='register_done'),
     path('accounts/register/', RegisterUserView.as_view(), name='register'),
     path('accounts/logout/', BBLogoutView.as_view(), name='logout'),
+    path('accounts/profile/<int:pk>/', profile_bb_detail, name='profile_bb_detail'),
     path('accounts/profile/', profile, name='profile'),
     path('accounts/login/', BBLoginView.as_view(), name='login'),
     path('<int:rubric_pk>/<int:pk>/', detail, name='detail'),
