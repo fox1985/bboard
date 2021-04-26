@@ -140,7 +140,7 @@ EMAIL_PORT = 1025
 
 THUMBNAIL_ALIASES = {
     '': {
-        'avatar': {'size': (96, 96), 'crop': True},
+        'default': {'size': (96, 96), 'crop': True},
     },
 }
 
