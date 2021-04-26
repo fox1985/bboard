@@ -89,7 +89,11 @@ def by_rubric(request, pk):
     return render(request, 'main/by_rubric.html', context)
 
 
-
+def detail(request, rubric_pk, pk ):
+    bb = get_object_or_404(Bb, pk=pk)
+    ais = bb.additionalimage_set.all()
+    context = {'bb': bb, 'ais': ais }
+    return render(request, 'main/detail.html', context)
 
 
 
