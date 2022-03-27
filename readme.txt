@@ -4,7 +4,7 @@ Django==3.2
 django-bootstrap4==3.0.0
 django-cleanup==5.2.0
 easy-thumbnails==2.7.1
-Pillow==8.2.0
+Pillow==9.0.1
 pytz==2021.1
 soupsieve==2.2.1
 sqlparse==0.4.1
