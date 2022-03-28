@@ -1,6 +1,7 @@
 asgiref==3.3.4
 beautifulsoup4==4.9.3
 Django==3.2
+django-bootstrap4==3.0.0
 django-cleanup==5.2.0
 easy-thumbnails==2.7.1
 Pillow==9.0.1
