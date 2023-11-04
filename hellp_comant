@@ -1,0 +1,25 @@
+
+php artisan make:controller BbsController
+php artisan make:migration create_bbs_table --create=bbs
+php artisan mgrate
+php artisan make:model Bb
+
+php artisan tinker
+
+
+В командной строке выполним откат последней миграции:
+php artisan migrate:rollback --step=1
+
+php artisan route:list
+
+
+--------------------------------------------------------
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+use App\Models\Bb;
+
+
+$user = User::create(['name' => 'admin', 'email' => 'tema.super@inbox.ru', 'password' => Hash::make ( 'admin')]);
+
+
+$user->bbs()->create(['title' => 'Грузовик', 'contente' => 'Грузоподъемность - 5 т', 'price' => 100000]);
